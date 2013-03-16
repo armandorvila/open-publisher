@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<import resource="classpath:sqlWrappingBeans.xml" />
+	<import resource="classpath:dataSourceBeans.xml" />
+	<import resource="classpath:configBeans.xml" />
+
+	<!-- JDBC Dao Beans -->
+
+	<bean id="jdbcArticleDao" class="com.armandorv.publisher.dataaccess.jdbc.JdbcArticleDao">
+		<constructor-arg ref="dataSource" />
+		<property name="sqlWrapping" ref="articleSqlWrapping" />
+	</bean>
+
+	<bean id="jdbcAuthorDao" class="com.armandorv.publisher.dataaccess.jdbc.JdbcAuthorDao">
+		<constructor-arg ref="dataSource" />
+		<property name="sqlWrapping" ref="authorSqlWrapping" />
+	</bean>
+
+	<bean id="jdbcUserDao" class="com.armandorv.publisher.dataaccess.jdbc.JdbcUserDao">
+		<constructor-arg ref="dataSource" />
+		<property name="sqlWrapping" ref="userSqlWrapping" />
+	</bean>
+
+	<!-- Dao Beans independs of his implementation -->
+
+	<bean id="daoFactory" class="${daofactory.impl}" />
+
+	<bean id="articleDao" factory-bean="daoFactory" factory-method="getArticleDao" />
+	<bean id="authorDao" factory-bean="daoFactory" factory-method="getAuthorDao" />
+	<bean id="userDao" factory-bean="daoFactory" factory-method="getUserDao" />
+
+</beans>
+

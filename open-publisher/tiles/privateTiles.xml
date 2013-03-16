@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+
+<tiles-definitions>
+
+	<definition name="profile" extends="skeleton">
+		<put-attribute name="header" value="/common/header.jsp" />
+		<put-attribute name="menu" value="/private/profileMenu.jsp" />
+		<put-attribute name="body" value="/private/profile.jsp" />
+
+	</definition>
+
+	<definition name="loguedHome" extends="skeleton">
+		<put-attribute name="header" value="/common/header.jsp" />
+		<put-attribute name="menu" value="/private/homeMenu.jsp" />
+		<put-attribute name="body" value="/public/home.jsp" />
+
+	</definition>
+
+	<definition name="publish" extends="skeleton">
+		<put-attribute name="header" value="/common/header.jsp" />
+		<put-attribute name="menu" value="/private/fullMenu.jsp" />
+		<put-attribute name="body" value="/private/publish.jsp" />
+	</definition>
+
+	<definition name="modifyProfile" extends="skeleton">
+		<put-attribute name="header" value="/common/header.jsp" />
+		<put-attribute name="menu" value="/private/fullMenu.jsp" />
+		<put-attribute name="body" value="/private/modifyProfile.jsp" />
+	</definition>
+
+	<definition name="queryArticles" extends="skeleton">
+		<put-attribute name="header" value="/common/header.jsp" />
+		<put-attribute name="menu" value="/private/fullMenu.jsp" />
+		<put-attribute name="body" value="/private/queryArticles.jsp" />
+	</definition>
+
+	<definition name="privateAdvancedSeek" extends="skeleton">
+		<put-attribute name="header" value="/common/header.jsp" />
+		<put-attribute name="body" value="/private/privateAdvancedSeek.jsp" />
+	</definition>
+
+	<definition name="privateArticleDetails" extends="skeleton">
+		<put-attribute name="header" value="/common/header.jsp" />
+		<put-attribute name="menu" value="/private/fullMenu.jsp" />
+		<put-attribute name="body" value="/private/privateArticleDetails.jsp" />
+	</definition>
+
+	<definition name="modifyArticle" extends="skeleton">
+		<put-attribute name="header" value="/common/header.jsp" />
+		<put-attribute name="menu" value="/private/fullMenu.jsp" />
+		<put-attribute name="body" value="/private/modifyArticleDetails.jsp" />
+	</definition>
+
+
+
+</tiles-definitions>

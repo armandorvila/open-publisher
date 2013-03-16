@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="com.armandorv.publisher.public" extends="com.armandorv.publisher.support">
+
+		<!-- Actions to Load -->
+
+		<action name="loadHome"
+			class="com.armandorv.publisher.presentation.load.LoadHomeAction">
+			<result type="tiles">home</result>
+			<result name="input" type="tiles">home</result>
+		</action>
+
+		<action name="loadRegister">
+			<result type="tiles">register</result>
+		</action>
+
+		<action name="loadPublicAdvancedSeek">
+			<result name="input" type="tiles">publicAdvancedSeek</result>
+			<result type="tiles">publicAdvancedSeek</result>
+		</action>
+
+		<action name="loadPublicArticleDetails"
+			class="com.armandorv.publisher.presentation.load.article.LoadArticleDetailsAction">
+			<result type="tiles">publicArticleDetails</result>
+		</action>
+
+		<!-- Actions to Submit -->
+
+		<action name="PublicAdvancedSeek"
+			class="com.armandorv.publisher.presentation.submit.seek.PublicAdvancedSeekAction">
+			<result type="tiles">home</result>
+			<result name="logued" type="tiles">loguedHome</result>
+			<result name="input" type="chain">loadPublicAdvancedSeek</result>
+		</action>
+
+		<action name="PublicSimpleSeek"
+			class="com.armandorv.publisher.presentation.submit.seek.PublicSimpleSeekAction">
+			<result type="tiles">home</result>
+			<result name="logued" type="tiles">loguedHome</result>
+			<result name="input" type="redirectAction">publicSimpleSeekDecorator</result>
+		</action>
+
+		<action name="publicSimpleSeekDecorator"
+			class="com.armandorv.publisher.presentation.submit.seek.PublicSeekActionDecorator">
+			<result name="notLogued" type="tiles">home</result>
+			<result name="logued" type="tiles">loguedHome</result>
+		</action>
+
+		<action name="enrollAuthor"
+			class="com.armandorv.publisher.presentation.submit.EnrollAuthorAction">
+			<result type="tiles">sccessfullEnrollment</result>
+			<result name="input" type="tiles">register</result>
+		</action>
+
+	</package>
+</struts>

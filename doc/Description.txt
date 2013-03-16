@@ -1,0 +1,14 @@
+deploy: 
+Instrucciones de Despliegue y configuración de servidores.
+
+Pantallas:
+
+Pantallas de la aplicacion, estan en el doc de analisis.
+
+Analisis:
+
+Descripcion, Requisitos, Casos de Uso y Pantallas.
+
+Diseño:
+
+Diagrama de Despliegue y de Calses.

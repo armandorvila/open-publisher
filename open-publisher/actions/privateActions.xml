@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="com.armandorv.publisher.private" extends="com.armandorv.publisher.support"
+		namespace="/private">
+
+		<action name="loadProfile"
+			class="com.armandorv.publisher.presentation.load.LoadProfileAction">
+			<result type="tiles">profile</result>
+			<result name="input" type="tiles">profile</result>
+		</action>
+
+		<action name="loguedHome"
+			class="com.armandorv.publisher.presentation.load.LoadHomeAction">
+			<result type="tiles">loguedHome</result>
+			<result name="input" type="tiles">loguedHome</result>
+		</action>
+
+		<action name="loadPublishArticle">
+			<result type="tiles" name="input">publish</result>
+			<result type="tiles">publish</result>
+		</action>
+
+		<action name="loadOwnArticles"
+			class="com.armandorv.publisher.presentation.load.article.LoadOwnArticlesAction">
+			<result type="tiles">queryArticles</result>
+			<result type="tiles" name="input">queryArticles</result>
+		</action>
+
+		<action name="loadPrivateArticleDetails"
+			class="com.armandorv.publisher.presentation.load.article.LoadArticleDetailsAction">
+			<result type="tiles">privateArticleDetails</result>
+		</action>
+
+		<action name="loadModifyProfile">
+			<result name="input" type="tiles">modifyProfile</result>
+			<result type="tiles">modifyProfile</result>
+		</action>
+
+		<action name="loadPrivateAdvancedSeek">
+			<result type="tiles">privateAdvancedSeek</result>
+			<result type="tiles" name="input">privateAdvancedSeek</result>
+		</action>
+
+		<action name="loadModifyArticle"
+			class="com.armandorv.publisher.presentation.load.article.LoadModifyArticleAction">
+			<result name="input" type="tiles">modifyArticle</result>
+			<result type="tiles">modifyArticle</result>
+		</action>
+
+		<!-- *******************SUMBIT ACTIONS*********************************** -->
+
+		<action name="PrivateAdvancedSeek"
+			class="com.armandorv.publisher.presentation.submit.seek.PrivateAdvancedSeekAction">
+			<result type="tiles">queryArticles</result>
+			<result name="input" type="chain">loadPrivateAdvancedSeek</result>
+		</action>
+
+		<action name="PrivateSimpleSeek"
+			class="com.armandorv.publisher.presentation.submit.seek.PrivateSimpleSeekAction">
+			<result type="tiles">queryArticles</result>
+			<result name="input" type="chain">loadOwnArticles</result>
+		</action>
+
+		<action name="deleteArticle"
+			class="com.armandorv.publisher.presentation.submit.article.DeleteArticleAction">
+			<result type="redirectAction">loadOwnArticles</result>
+			<result name="input" type="chain">loadProfile</result>
+		</action>
+
+		<action name="publishArticle"
+			class="com.armandorv.publisher.presentation.submit.article.PublishArticleAction">
+			<result type="redirectAction">loadProfile</result>
+			<result name="input" type="chain">loadPublishArticle</result>
+		</action>
+
+		<action name="modifyArticle"
+			class="com.armandorv.publisher.presentation.submit.article.ModifyArticleAction">
+			<result type="redirectAction">loadOwnArticles</result>
+			<result name="input" type="chain">loadModifyArticle</result>
+		</action>
+
+		<action name="deleteProfile"
+			class="com.armandorv.publisher.presentation.submit.DeleteProfileAction">
+			<result type="redirectAction">loadHome</result>
+		</action>
+
+		<action name="modifyProfile"
+			class="com.armandorv.publisher.presentation.submit.ModifyProfileAction">
+			<result name="input" type="chain">loadModifyProfile</result>
+			<result type="redirectAction">loadProfile</result>
+		</action>
+
+	</package>
+</struts>

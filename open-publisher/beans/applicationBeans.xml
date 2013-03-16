@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	 <import resource="classpath:configBeans.xml" />
+	<import resource="classpath:ejbBeans.xml" />
+	
+
+	<bean id="fileHelper" class="com.armandorv.publisher.application.helpers.FileHelper"
+		scope="prototype">
+		<property name="baseFilePath" value="${publisher.files.path}" />
+		<property name="baseFileUrl" value="${publisher.files.url}" />
+	</bean>
+
+	<bean id="articlesBrowser" class="${articles.browser.impl}" scope="prototype">
+		<property name="service" ref="ejbArticlesService" />
+	</bean>
+
+
+
+</beans>

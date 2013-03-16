@@ -1,0 +1,16 @@
+-cliente EJB
+
+Revisar config.proeprties y jndi.properties, en el config.properties se puede cambiar el nombre del ejb para local.
+------------------------------------------------------------------------------------------------------
+
+-Web 
+
+Revisar config.properties 	¡¡¡¡¡¡¡ importante la ruta de los ficheros !!!!!
+
+Debe apuntar a la carpeta files del war, para que se guarden los ficheros ahi, si no se pone asi da 404 al intentar
+ver el fichero porque todas las urls van ahi.
+
+------------------------------------------------------------------------------------------------
+-businespublisher.jar
+SOLO->TESTS :Revisar bd.proerties y poner datos de la bd, ip, puerto,user and pass..
+Revisar implementations.proeprties para cambiar entre jpa y jdbc (No funciona Jpa)

@@ -1,0 +1,11 @@
+C:\Users\armandorv\Desktop\WSClientPublisher\WSClientPublisher\bin\Debug\WSClientPublisher.exe.config
+C:\Users\armandorv\Desktop\WSClientPublisher\WSClientPublisher\bin\Debug\WSClientPublisher.exe
+C:\Users\armandorv\Desktop\WSClientPublisher\WSClientPublisher\bin\Debug\WSClientPublisher.pdb
+C:\Users\armandorv\Desktop\WSClientPublisher\WSClientPublisher\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\armandorv\Desktop\WSClientPublisher\WSClientPublisher\obj\x86\Debug\WSClientPublisher.Properties.Resources.resources
+C:\Users\armandorv\Desktop\WSClientPublisher\WSClientPublisher\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\armandorv\Desktop\WSClientPublisher\WSClientPublisher\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\armandorv\Desktop\WSClientPublisher\WSClientPublisher\obj\x86\Debug\WSClientPublisher.exe
+C:\Users\armandorv\Desktop\WSClientPublisher\WSClientPublisher\obj\x86\Debug\WSClientPublisher.pdb
+C:\Users\armandorv\Desktop\WSClientPublisher\WSClientPublisher\obj\x86\Debug\WSClientPublisher.View.Forms.LoginForm.resources
+C:\Users\armandorv\Desktop\WSClientPublisher\WSClientPublisher\obj\x86\Debug\WSClientPublisher.View.Forms.MainForm.resources

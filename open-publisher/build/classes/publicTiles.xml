@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+
+<tiles-definitions>
+
+
+	<definition name="home" extends="skeleton">
+		<put-attribute name="header" value="/common/header.jsp" />
+		<put-attribute name="menu" value="/common/commonMenu.jsp" />
+		<put-attribute name="body" value="/public/home.jsp" />
+	</definition>
+
+	<definition name="register" extends="skeleton">
+		<put-attribute name="header" value="/common/header.jsp" />
+		<put-attribute name="menu" value="/public/publicMenu.jsp" />
+		<put-attribute name="body" value="/public/register.jsp" />
+	</definition>
+
+	<definition name="publicAdvancedSeek" extends="skeleton">
+		<put-attribute name="header" value="/common/header.jsp" />
+		<put-attribute name="menu" value="/public/publicMenu.jsp" />
+		<put-attribute name="body" value="/public/publicAdvancedSeek.jsp" />
+	</definition>
+
+	<definition name="publicArticleDetails" extends="skeleton">
+		<put-attribute name="header" value="/common/header.jsp" />
+		<put-attribute name="menu" value="/public/publicMenu.jsp" />
+		<put-attribute name="body" value="/public/publicArticleDetails.jsp" />
+	</definition>
+
+	<definition name="sccessfullEnrollment" extends="skeleton">
+		<put-attribute name="header" value="/common/emptyHeader.jsp" />
+		<put-attribute name="menu" value="/public/publicMenu.jsp" />
+		<put-attribute name="body" value="/public/sccessfullEnrollment.jsp" />
+	</definition>
+
+</tiles-definitions>

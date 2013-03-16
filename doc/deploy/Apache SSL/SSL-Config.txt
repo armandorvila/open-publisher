@@ -1,0 +1,8 @@
+1-Copiar el certificado y la clave a config
+
+2-Cargar el modulo ssl e incluir configuracion
+-Quit # From LoadModule ssl_module modules/mod_ssl.so
+-Quit # from Include conf/extra/httpd-ssl.conf
+
+4-coinfigurar el fichero ssl, igual que el de ejempl SSL-Config pero cambiando rutas.
+

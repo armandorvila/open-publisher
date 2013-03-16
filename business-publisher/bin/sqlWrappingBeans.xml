@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<import resource="classpath:configBeans.xml" />
+
+	<bean id="articleSqlWrapping"
+		class="com.armandorv.publisher.dataaccess.jdbc.sql.ArticleSQLWrapping">
+		<property name="create" value="${sql.articles.create}" />
+		<property name="modify" value="${sql.articles.modify}" />
+		<property name="delete" value="${sql.articles.delete}" />
+		<property name="getById" value="${sql.articles.get.byid}" />
+		<property name="getAll" value="${sql.articles.get.all}" />
+		<property name="getLastId" value="${sql.articles.get.lastid}" />
+		<property name="getByAuthor" value="${sql.articles.gt.byauthor}" />
+	</bean>
+
+	<bean id="authorSqlWrapping"
+		class="com.armandorv.publisher.dataaccess.jdbc.sql.AuthorSQLWrapping">
+
+		<property name="create" value="${sql.author.create}" />
+		<property name="modify" value="${sql.author.modify}" />
+		<property name="delete" value="${sql.author.delete}" />
+		<property name="getById" value="${sql.author.get.byid}" />
+		<property name="getAll" value="${sql.author.get.all}" />
+		<property name="getLastId" value="${sql.author.get.lastid}" />
+		<property name="addArticle" value="${sql.author.add.article}"></property>
+	</bean>
+
+	<bean id="userSqlWrapping"
+		class="com.armandorv.publisher.dataaccess.jdbc.sql.UserSQLWrapping">
+
+		<property name="create" value="${sql.user.create}" />
+		<property name="modify" value="${sql.user.modify}" />
+		<property name="delete" value="${sql.user.delete}" />
+		<property name="getByUserName" value="${sql.user.get.byusername}" />
+
+	</bean>
+
+</beans>

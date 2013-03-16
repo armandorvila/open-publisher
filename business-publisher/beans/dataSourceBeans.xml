@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<import resource="classpath:configBeans.xml" />
+
+	<!-- PARA TESTS; OJO PEDIRSELA AL JNDI DEL JBOSS -->
+	<!-- <bean id="publisherDataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource"> 
+		<property name="driverClassName" value="${bd.publisher.driver.name}" /> <property 
+		name="url" value="${bd.publisher.url}" /> <property name="username" value="${bd.publisher.user}" 
+		/> <property name="password" value="${bd.publisher.pass}" /> </bean> -->
+
+	<bean id="dataSource" class="org.springframework.jndi.JndiObjectFactoryBean">
+		<property name="jndiName" value="java:PublisherDS" />
+	</bean>
+
+</beans>

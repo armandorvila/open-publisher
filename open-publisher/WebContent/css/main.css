@@ -1,0 +1,307 @@
+#count {
+	position:absolute;
+	color: #fff;
+	left: 80%;
+	font-size: medium;
+	font-weight: bold;
+	
+}
+
+#user_message{
+   	color: #fff;
+   	float:right;
+}
+
+#menu ul {
+	height: 2em;
+	font-size: 1.1em;
+	margin-top: 1em;
+	margin-left: 1.5em;
+}
+
+#menu ul li {
+	float: left;
+	list-style: none;
+	margin-right: 1em;
+	background: #010101;
+	-moz-border-radius: 4px 4px 0 0;
+	-webkit-border-radius: 4px 4px 0 0;
+	-o-border-radius: 4px 4px 0 0;
+	border-radius: 4px 4px 0 0;
+}
+
+#menu a {
+	color: #fff;
+	padding: .5em .75em 1em .75em;
+	-moz-border-radius: 4px 4px 0 0;
+	-webkit-border-radius: 4px 4px 0 0;
+	-o-border-radius: 4px 4px 0 0;
+	border-radius: 4px 4px 0 0;
+	display: block;
+}
+
+#menu ul li.actual {
+	background: #010101;
+	padding: .5em .75em 0.5em .75em;
+}
+
+#menu ul li.actual a {
+	color: #fff;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+html {
+	height: 100%;
+}
+
+body {
+	font-family: "Times New Roman", Times, serif;
+	background: #D8DEEB;
+	color: #333;
+	font-size: 1em;
+	height: 100%;
+}
+/*****  Header Styles *******/
+#header {
+	background: url(../images/header_bg.jpg) no-repeat;
+	height: 105px;
+	position: relative;
+	-webkit-border-radius: 9px;
+	-moz-border-radius: 9px;
+	border-radius: 8px;
+	margin-bottom: .4em;
+}
+
+#header h1 {
+	font-size: 2.95em;
+	font-style: italic;
+	font-weight: bolder;
+	color: #fff;
+	display: block;
+	position: absolute;
+	top: 13px;
+	left: 45px;
+	width: 350px;
+}
+
+#header #formLogin {
+	float: right;
+	margin-right: 5%;
+	margin-left: 3%;
+	color: #fff;
+}
+
+#header #formLogin input {
+	margin-top: 0.5%;
+	margin-bottom: 1%;
+	font-size: 60%;
+	top: 1em;
+}
+
+#header a {
+	font-style: italic;
+	font-weight: normal;
+	color: #fff;
+	display: block;
+	float: right;
+	font-size: 90%;
+}
+/************************************************************/
+
+/*****  Contnent  Styles *******/
+#content #register input {
+	margin-top: 0.3%;
+	margin-bottom: 0.3%;
+}
+
+:focus {
+	outline: 0;
+}
+
+#content #back {
+	float: right;
+}
+
+#content#idDivLogin input[type="submit"] {
+	margin-right: .5em;
+	position: relative;
+	left: 25em;
+	margin-right: .0em;
+}
+
+#container {
+	height: 100%;
+	margin: 0 auto;
+	width: 920px;
+}
+
+#content {
+	background: #FFF 75em 2em no-repeat;
+	padding-left: 6em;
+	padding-right: 5em;
+	padding-top: 3em;
+	color: #333;
+	height: 50%;
+	-webkit-border-radius: 9px 9px 0 0;
+	-moz-border-radius: 9px 9px 0 0;
+	border-radius: 9px 9px 0 0;
+}
+
+a {
+	text-decoration: underline;
+	color: #333;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+h2 {
+	font-style: italic;
+	color: #010101;
+	margin-bottom: 1em;
+}
+
+label {
+	font-style: italic;
+	font-size: 1.7em;
+	color: #556FA8;
+}
+
+input[type="text"],input[type="password"] {
+	padding: 2px;
+	border: 1px solid #333;
+	display: block;
+}
+
+input[type="text"] {
+	margin-bottom: 1.5em;
+}
+
+input[type="text"]:focus,input[type="password"]:focus {
+	border: 1px solid #666;
+}
+
+input[type="submit"],#content input[type="reset"],#content input[type="button"]
+	{
+	border: 0;
+	background: #010101 url(../images/degradadoFondoBoton.png) repeat-x;
+	display: inline-block;
+	padding: 3px 10px 3px;
+	margin-left: .5em;
+	color: #fff;
+	text-decoration: none;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	-moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+	-webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+	text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.3);
+	border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+	position: relative;
+	cursor: pointer;
+	font-weight: bold;
+}
+
+#content #publicSeek,#content #privateSeek {
+	float: right;
+}
+
+.errorMessage {
+	color: #B70000;
+	margin-bottom: 1em;
+}
+/*Articles Table*/
+#content table th {
+	background: #010101;
+	color: #fff;
+	padding: .3em .7em;
+	text-align: left;
+}
+
+#content table td {
+	padding: .3em .7em;
+	background: #f2f4f9;
+}
+
+#content table .even td {
+	background: #dce1ed;
+}
+
+#content table caption {
+	background: none repeat scroll 0 0 #010101;
+	color: #FFFFFF;
+	font-weight: bold;
+	padding: 0.5em 0;
+	text-transform: uppercase;
+}
+
+/*Footer Styles*/
+#footer {
+	margin-top: 1%;
+	background: url(../images/header_bg.jpg) no-repeat;
+	-webkit-border-radius: 0 0 2px 2px;
+	-moz-border-radius: 0 0 2px 2px;
+	padding-bottom: 1em;
+	border-radius: 0 0 1px 1px;
+	font-style: italic;
+	font-weight: bolder;
+	color: #fff;
+	display: block;
+	font-size: 210%;
+	border-radius: 8px;
+	margin-bottom: .4em;
+	height:10%; 
+}
+
+#footer #footer.text {
+margin-top: 2em;	
+}
+
+#footer p a {
+	background: url('../images/armandorv.jpg') no-repeat center;
+	display: block;
+	text-indent: -9999em;
+	width: 8%;
+	height: 2.1em;
+	margin-left: auto;
+	margin-right: 48%;
+	margin-bottom: 1.0;
+	margin-top: 1.0%;
+	border-color: white;
+	border-style: inset;
+	float: right;
+	text-align: center;
+	right: 30%;
+}
+
+
+#content #author_options {
+	margin-top: 10%;
+	font-style: italic;
+	font-weight: bolder;
+	font-size: 120%;
+	float: right;
+	right: 30%;
+}
+
+#content #author_options li {
+	margin-top: 10%;
+}
+
+#content #author_info  li {
+	margin-top: 5%;
+}
+
+#content #author_info {
+	margin-top: 10%;
+	font-style: italic;
+	font-weight: bolder;
+	width: 20%;
+	float: left;
+}

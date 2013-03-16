@@ -1,0 +1,207 @@
+<definitions name='EjbArticlesServiceService' targetNamespace='http://articles.business.publisher.armandorv.com/' xmlns='http://schemas.xmlsoap.org/wsdl/' xmlns:soap='http://schemas.xmlsoap.org/wsdl/soap/' xmlns:tns='http://articles.business.publisher.armandorv.com/' xmlns:xsd='http://www.w3.org/2001/XMLSchema'>
+ <types>
+  <xs:schema targetNamespace='http://articles.business.publisher.armandorv.com/' version='1.0' xmlns:tns='http://articles.business.publisher.armandorv.com/' xmlns:xs='http://www.w3.org/2001/XMLSchema'>
+   <xs:element name='deleteArticle' type='tns:deleteArticle'/>
+   <xs:element name='deleteArticleResponse' type='tns:deleteArticleResponse'/>
+   <xs:element name='getAllArticles' type='tns:getAllArticles'/>
+   <xs:element name='getAllArticlesOfAuthor' type='tns:getAllArticlesOfAuthor'/>
+   <xs:element name='getAllArticlesOfAuthorResponse' type='tns:getAllArticlesOfAuthorResponse'/>
+   <xs:element name='getAllArticlesResponse' type='tns:getAllArticlesResponse'/>
+   <xs:element name='getArticleByID' type='tns:getArticleByID'/>
+   <xs:element name='getArticleByIDResponse' type='tns:getArticleByIDResponse'/>
+   <xs:element name='modifyArticle' type='tns:modifyArticle'/>
+   <xs:element name='modifyArticleResponse' type='tns:modifyArticleResponse'/>
+   <xs:element name='publishArticle' type='tns:publishArticle'/>
+   <xs:element name='publishArticleResponse' type='tns:publishArticleResponse'/>
+   <xs:complexType name='publishArticle'>
+    <xs:sequence>
+     <xs:element name='arg0' type='xs:long'/>
+     <xs:element minOccurs='0' name='arg1' type='tns:article'/>
+    </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name='article'>
+    <xs:sequence>
+     <xs:element minOccurs='0' name='author' type='xs:string'/>
+     <xs:element minOccurs='0' name='dateOfCreation' type='xs:dateTime'/>
+     <xs:element minOccurs='0' name='description' type='xs:string'/>
+     <xs:element minOccurs='0' name='fileName' type='xs:string'/>
+     <xs:element name='id' type='xs:long'/>
+     <xs:element minOccurs='0' name='subject' type='xs:string'/>
+     <xs:element minOccurs='0' name='title' type='xs:string'/>
+     <xs:element minOccurs='0' name='url' type='xs:string'/>
+    </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name='publishArticleResponse'>
+    <xs:sequence/>
+   </xs:complexType>
+   <xs:complexType name='modifyArticle'>
+    <xs:sequence>
+     <xs:element minOccurs='0' name='arg0' type='tns:article'/>
+    </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name='modifyArticleResponse'>
+    <xs:sequence/>
+   </xs:complexType>
+   <xs:complexType name='deleteArticle'>
+    <xs:sequence>
+     <xs:element name='arg0' type='xs:long'/>
+    </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name='deleteArticleResponse'>
+    <xs:sequence/>
+   </xs:complexType>
+   <xs:complexType name='getArticleByID'>
+    <xs:sequence>
+     <xs:element name='arg0' type='xs:long'/>
+    </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name='getArticleByIDResponse'>
+    <xs:sequence>
+     <xs:element minOccurs='0' name='return' type='tns:article'/>
+    </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name='getAllArticles'>
+    <xs:sequence/>
+   </xs:complexType>
+   <xs:complexType name='getAllArticlesResponse'>
+    <xs:sequence>
+     <xs:element maxOccurs='unbounded' minOccurs='0' name='return' type='tns:article'/>
+    </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name='getAllArticlesOfAuthor'>
+    <xs:sequence>
+     <xs:element name='arg0' type='xs:long'/>
+    </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name='getAllArticlesOfAuthorResponse'>
+    <xs:sequence>
+     <xs:element maxOccurs='unbounded' minOccurs='0' name='return' type='tns:article'/>
+    </xs:sequence>
+   </xs:complexType>
+  </xs:schema>
+ </types>
+ <message name='ArticlesService_getArticleByID'>
+  <part element='tns:getArticleByID' name='getArticleByID'></part>
+ </message>
+ <message name='ArticlesService_publishArticle'>
+  <part element='tns:publishArticle' name='publishArticle'></part>
+ </message>
+ <message name='ArticlesService_modifyArticleResponse'>
+  <part element='tns:modifyArticleResponse' name='modifyArticleResponse'></part>
+ </message>
+ <message name='ArticlesService_getAllArticlesOfAuthorResponse'>
+  <part element='tns:getAllArticlesOfAuthorResponse' name='getAllArticlesOfAuthorResponse'></part>
+ </message>
+ <message name='ArticlesService_deleteArticle'>
+  <part element='tns:deleteArticle' name='deleteArticle'></part>
+ </message>
+ <message name='ArticlesService_publishArticleResponse'>
+  <part element='tns:publishArticleResponse' name='publishArticleResponse'></part>
+ </message>
+ <message name='ArticlesService_getAllArticlesOfAuthor'>
+  <part element='tns:getAllArticlesOfAuthor' name='getAllArticlesOfAuthor'></part>
+ </message>
+ <message name='ArticlesService_getAllArticlesResponse'>
+  <part element='tns:getAllArticlesResponse' name='getAllArticlesResponse'></part>
+ </message>
+ <message name='ArticlesService_getAllArticles'>
+  <part element='tns:getAllArticles' name='getAllArticles'></part>
+ </message>
+ <message name='ArticlesService_deleteArticleResponse'>
+  <part element='tns:deleteArticleResponse' name='deleteArticleResponse'></part>
+ </message>
+ <message name='ArticlesService_modifyArticle'>
+  <part element='tns:modifyArticle' name='modifyArticle'></part>
+ </message>
+ <message name='ArticlesService_getArticleByIDResponse'>
+  <part element='tns:getArticleByIDResponse' name='getArticleByIDResponse'></part>
+ </message>
+ <portType name='ArticlesService'>
+  <operation name='deleteArticle' parameterOrder='deleteArticle'>
+   <input message='tns:ArticlesService_deleteArticle'></input>
+   <output message='tns:ArticlesService_deleteArticleResponse'></output>
+  </operation>
+  <operation name='getAllArticles' parameterOrder='getAllArticles'>
+   <input message='tns:ArticlesService_getAllArticles'></input>
+   <output message='tns:ArticlesService_getAllArticlesResponse'></output>
+  </operation>
+  <operation name='getAllArticlesOfAuthor' parameterOrder='getAllArticlesOfAuthor'>
+   <input message='tns:ArticlesService_getAllArticlesOfAuthor'></input>
+   <output message='tns:ArticlesService_getAllArticlesOfAuthorResponse'></output>
+  </operation>
+  <operation name='getArticleByID' parameterOrder='getArticleByID'>
+   <input message='tns:ArticlesService_getArticleByID'></input>
+   <output message='tns:ArticlesService_getArticleByIDResponse'></output>
+  </operation>
+  <operation name='modifyArticle' parameterOrder='modifyArticle'>
+   <input message='tns:ArticlesService_modifyArticle'></input>
+   <output message='tns:ArticlesService_modifyArticleResponse'></output>
+  </operation>
+  <operation name='publishArticle' parameterOrder='publishArticle'>
+   <input message='tns:ArticlesService_publishArticle'></input>
+   <output message='tns:ArticlesService_publishArticleResponse'></output>
+  </operation>
+ </portType>
+ <binding name='ArticlesServiceBinding' type='tns:ArticlesService'>
+  <soap:binding style='document' transport='http://schemas.xmlsoap.org/soap/http'/>
+  <operation name='deleteArticle'>
+   <soap:operation soapAction=''/>
+   <input>
+    <soap:body use='literal'/>
+   </input>
+   <output>
+    <soap:body use='literal'/>
+   </output>
+  </operation>
+  <operation name='getAllArticles'>
+   <soap:operation soapAction=''/>
+   <input>
+    <soap:body use='literal'/>
+   </input>
+   <output>
+    <soap:body use='literal'/>
+   </output>
+  </operation>
+  <operation name='getAllArticlesOfAuthor'>
+   <soap:operation soapAction=''/>
+   <input>
+    <soap:body use='literal'/>
+   </input>
+   <output>
+    <soap:body use='literal'/>
+   </output>
+  </operation>
+  <operation name='getArticleByID'>
+   <soap:operation soapAction=''/>
+   <input>
+    <soap:body use='literal'/>
+   </input>
+   <output>
+    <soap:body use='literal'/>
+   </output>
+  </operation>
+  <operation name='modifyArticle'>
+   <soap:operation soapAction=''/>
+   <input>
+    <soap:body use='literal'/>
+   </input>
+   <output>
+    <soap:body use='literal'/>
+   </output>
+  </operation>
+  <operation name='publishArticle'>
+   <soap:operation soapAction=''/>
+   <input>
+    <soap:body use='literal'/>
+   </input>
+   <output>
+    <soap:body use='literal'/>
+   </output>
+  </operation>
+ </binding>
+ <service name='EjbArticlesServiceService'>
+  <port binding='tns:ArticlesServiceBinding' name='ArticlesServicePort'>
+   <soap:address location='http://127.0.0.1:8080/businesspublisher/EjbArticlesService'/>
+  </port>
+ </service>
+</definitions>

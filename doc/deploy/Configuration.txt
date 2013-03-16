@@ -1,0 +1,11 @@
+-businespublisher.jar
+
+SOLO->TESTS :Revisar bd.proerties y poner datos de la bd, ip, puerto,user and pass..
+Revisar implementations.proeprties para cambiar entre jpa y jdbc (No funciona Jpa)
+
+-client
+
+Revisar config.proeprties y jndi.properties
+
+-Web 
+Revisar config.properties OJO LA RUTA DEL FICHERO que apunte files dentro del war.

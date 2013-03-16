@@ -1,0 +1,17 @@
+Load two modules :
+
+LoadModule proxy_module modules/mod_proxy.so
+LoadModule proxy_ajp_module modules/mod_proxy_ajp.so
+
+and configure it:
+
+##################################################################
+ProxyRequests Off
+ProxyPreserveHost On
+
+<IfModule mod_proxy_ajp.c>
+    ProxyPass / ajp://localhost:8010/
+    ProxyPassReverse / ajp://localhost:8010/
+</IfModule>
+
+##################################################################

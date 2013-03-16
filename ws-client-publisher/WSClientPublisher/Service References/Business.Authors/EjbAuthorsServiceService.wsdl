@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://authors.business.publisher.armandorv.com/" name="EjbAuthorsServiceService" targetNamespace="http://authors.business.publisher.armandorv.com/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xs:schema targetNamespace="http://authors.business.publisher.armandorv.com/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="deleteAuthor" type="tns:deleteAuthor" />
+      <xs:element name="deleteAuthorResponse" type="tns:deleteAuthorResponse" />
+      <xs:element name="enrollAuthor" type="tns:enrollAuthor" />
+      <xs:element name="enrollAuthorResponse" type="tns:enrollAuthorResponse" />
+      <xs:element name="getAllAuthors" type="tns:getAllAuthors" />
+      <xs:element name="getAllAuthorsResponse" type="tns:getAllAuthorsResponse" />
+      <xs:element name="getAuthorByuserName" type="tns:getAuthorByuserName" />
+      <xs:element name="getAuthorByuserNameResponse" type="tns:getAuthorByuserNameResponse" />
+      <xs:element name="modifyAuthor" type="tns:modifyAuthor" />
+      <xs:element name="modifyAuthorResponse" type="tns:modifyAuthorResponse" />
+      <xs:complexType name="enrollAuthor">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="tns:user" />
+          <xs:element minOccurs="0" name="arg1" type="tns:author" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="user">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="author" type="tns:author" />
+          <xs:element minOccurs="0" name="password" type="xs:string" />
+          <xs:element minOccurs="0" name="userName" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="author">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="dateOfJoining" type="xs:dateTime" />
+          <xs:element name="id" type="xs:long" />
+          <xs:element minOccurs="0" name="name" type="xs:string" />
+          <xs:element minOccurs="0" name="surname" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="enrollAuthorResponse">
+        <xs:sequence />
+      </xs:complexType>
+      <xs:complexType name="deleteAuthor">
+        <xs:sequence>
+          <xs:element name="arg0" type="xs:long" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="deleteAuthorResponse">
+        <xs:sequence />
+      </xs:complexType>
+      <xs:complexType name="modifyAuthor">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="tns:author" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="modifyAuthorResponse">
+        <xs:sequence />
+      </xs:complexType>
+      <xs:complexType name="getAuthorByuserName">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getAuthorByuserNameResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:author" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getAllAuthors">
+        <xs:sequence />
+      </xs:complexType>
+      <xs:complexType name="getAllAuthorsResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:author" />
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+  </types>
+  <message name="AuthorsService_enrollAuthorResponse">
+    <part name="enrollAuthorResponse" element="tns:enrollAuthorResponse" />
+  </message>
+  <message name="AuthorsService_deleteAuthorResponse">
+    <part name="deleteAuthorResponse" element="tns:deleteAuthorResponse" />
+  </message>
+  <message name="AuthorsService_getAuthorByuserName">
+    <part name="getAuthorByuserName" element="tns:getAuthorByuserName" />
+  </message>
+  <message name="AuthorsService_getAllAuthors">
+    <part name="getAllAuthors" element="tns:getAllAuthors" />
+  </message>
+  <message name="AuthorsService_getAllAuthorsResponse">
+    <part name="getAllAuthorsResponse" element="tns:getAllAuthorsResponse" />
+  </message>
+  <message name="AuthorsService_modifyAuthor">
+    <part name="modifyAuthor" element="tns:modifyAuthor" />
+  </message>
+  <message name="AuthorsService_getAuthorByuserNameResponse">
+    <part name="getAuthorByuserNameResponse" element="tns:getAuthorByuserNameResponse" />
+  </message>
+  <message name="AuthorsService_deleteAuthor">
+    <part name="deleteAuthor" element="tns:deleteAuthor" />
+  </message>
+  <message name="AuthorsService_enrollAuthor">
+    <part name="enrollAuthor" element="tns:enrollAuthor" />
+  </message>
+  <message name="AuthorsService_modifyAuthorResponse">
+    <part name="modifyAuthorResponse" element="tns:modifyAuthorResponse" />
+  </message>
+  <portType name="AuthorsService">
+    <operation name="deleteAuthor" parameterOrder="deleteAuthor">
+      <input message="tns:AuthorsService_deleteAuthor" />
+      <output message="tns:AuthorsService_deleteAuthorResponse" />
+    </operation>
+    <operation name="enrollAuthor" parameterOrder="enrollAuthor">
+      <input message="tns:AuthorsService_enrollAuthor" />
+      <output message="tns:AuthorsService_enrollAuthorResponse" />
+    </operation>
+    <operation name="getAllAuthors" parameterOrder="getAllAuthors">
+      <input message="tns:AuthorsService_getAllAuthors" />
+      <output message="tns:AuthorsService_getAllAuthorsResponse" />
+    </operation>
+    <operation name="getAuthorByuserName" parameterOrder="getAuthorByuserName">
+      <input message="tns:AuthorsService_getAuthorByuserName" />
+      <output message="tns:AuthorsService_getAuthorByuserNameResponse" />
+    </operation>
+    <operation name="modifyAuthor" parameterOrder="modifyAuthor">
+      <input message="tns:AuthorsService_modifyAuthor" />
+      <output message="tns:AuthorsService_modifyAuthorResponse" />
+    </operation>
+  </portType>
+  <binding name="AuthorsServiceBinding" type="tns:AuthorsService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="deleteAuthor">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="enrollAuthor">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getAllAuthors">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getAuthorByuserName">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modifyAuthor">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="EjbAuthorsServiceService">
+    <port name="AuthorsServicePort" binding="tns:AuthorsServiceBinding">
+      <soap:address location="http://127.0.0.1:8080/businesspublisher/EjbAuthorsService" />
+    </port>
+  </service>
+</definitions>

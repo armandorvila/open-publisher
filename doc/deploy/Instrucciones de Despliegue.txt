@@ -1,0 +1,40 @@
+1- JBOSS :
+-cOPIAR publisherbusines.jar de Dist al directorio de deploy.
+-COPIAr el contenido de lib/business_publisher a al lib del Jboss
+-Copiar el ficher publisher-datasource.xml al directorio de deploy del jboss(esta en data)
+
+2-
+-Tomcat modificar el server xml para que escuche en el 9090 y en 8010 de ajp
+-Tirar el war
+-Modificar el properties del war para los ficheros.
+-Añadir el contenido de lib/jboss-client a lib del tomcat
+
+3- Apache 
+
+-Configurar el httpd.config para que made todo al ajp del tomcat.
+-Comnfigurar el apache para ssl
+
+4-Arrancar la base de datos, con el .bat que hay endata ->startup.bat
+--------------------------------------------------------------------------------------------------------
+
+Mas Detalle:
+
+1- 
+El apartado 1 consiste en copiar el .jar de la capa de negocio con los ejbs en el directorio de deploy, 
+este .jar se genera a partir del proyecto BusinessPublisher.
+Ademas hay que copiar sus librerias al lib del Jboss/default para que despliegue el context de spring.
+Adeamas hay que copiar el xml que define el datasource en el jndi del jboss, este esta en el proyecto o bien en data.
+
+----------------------------------------------------------------------------------------------------------
+
+2-Este consiste en poner al tomcat a escuchar en otros puertos para que no choque con el jboss, en dejar el 
+contenedor del cliente en el tomcat y en tirar el war en el tomcat.
+
+OJO->Hay que modificar el config.properties para ponerle el path real the la carpeta files del war.
+
+----------------------------------------------------------------------------------------------------------
+
+3-Configurar el apache para que redirija al AJP del tomcat, y ademas con ssl, no es necesario, se puede tirar del
+tomcat o incluso desplegar el war en el jboss.
+
+----------------------------------------------------------------------------------------------------
